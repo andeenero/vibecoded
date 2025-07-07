@@ -98,7 +98,7 @@ export default function Home() {
               <div className="text-center p-6 sm:p-8" style={{ color: '#d5ae76' }}>
                 <p className="text-6xl sm:text-7xl mb-4 sm:mb-6" style={{ fontFamily: 'Ballet, cursive' }}>✦</p>
                 <p className="text-xl sm:text-2xl font-light tracking-wide" style={{ fontFamily: 'Montaga, serif' }}>
-                  Tap for today's
+                  Tap for today&apos;s
                 </p>
                 <p className="text-2xl sm:text-3xl tracking-wide" style={{ fontFamily: 'Montaga, serif' }}>
                   download
