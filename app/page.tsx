@@ -963,6 +963,12 @@ const cards = [
   }
 ]
 
+export default function Home() {
+  const [isFlipped, setIsFlipped] = useState(false)
+  const [currentCard, setCurrentCard] = useState(0)
+  const [hasDrawnToday, setHasDrawnToday] = useState(false)
+  const shareCardRef = useRef<HTMLDivElement>(null)
+
   const handleFlip = () => {
     if (!hasDrawnToday) {
       // Pick a random card when first flipping
