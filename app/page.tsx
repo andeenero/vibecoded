@@ -1019,7 +1019,7 @@ export default function Home() {
         </h1>
         
         {/* Card Container */}
-        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto">
+        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto animate-fade-in">
           <div 
             className={`absolute inset-0 w-full h-full transition-all duration-700 transform-gpu preserve-3d cursor-pointer ${
               isFlipped ? 'rotate-y-180' : ''
@@ -1029,7 +1029,7 @@ export default function Home() {
           >
             {/* Card Front */}
             <div 
-              className="absolute inset-0 w-full h-full backface-hidden rounded-lg shadow-2xl flex items-center justify-center"
+              className="absolute inset-0 w-full h-full backface-hidden rounded-lg shadow-2xl flex items-center justify-center transition-shadow hover:shadow-3xl"
               style={{ 
                 backfaceVisibility: 'hidden',
                 backgroundColor: '#4a1b10'
