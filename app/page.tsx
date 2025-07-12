@@ -1014,12 +1014,12 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center p-4" style={{ backgroundColor: '#d5ae76' }}>
       <div className="text-center max-w-2xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-12 tracking-widest" style={{ color: '#4a1b10', fontFamily: 'Playfair Display, serif' }}>
+        <h1 className="text-5xl md:text-7xl font-bold mb-12 tracking-widest animate-fade-in-down" style={{ color: '#4a1b10', fontFamily: 'Playfair Display, serif' }}>
           VIBECODED.
         </h1>
         
         {/* Card Container */}
-        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto animate-fade-in">
+        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto animate-fade-in-up">
           <div 
             className={`absolute inset-0 w-full h-full transition-all duration-700 transform-gpu preserve-3d cursor-pointer ${
               isFlipped ? 'rotate-y-180' : ''
@@ -1091,10 +1091,10 @@ export default function Home() {
           </p>
           
           {isFlipped && (
-            <div className="space-y-3">
+            <div className="space-y-3 animate-fade-in">
               <button
                 onClick={handleShare}
-                className="block mx-auto px-6 py-2 rounded-full transition-all hover:opacity-80"
+                className="block mx-auto px-6 py-2 rounded-full transition-all hover:opacity-80 hover:scale-105 active:scale-95"
                 style={{ 
                   backgroundColor: '#4a1b10',
                   color: '#d5ae76',
@@ -1106,7 +1106,7 @@ export default function Home() {
               
               <button
                 onClick={handleNewCard}
-                className="block mx-auto text-sm underline transition-opacity hover:opacity-70"
+                className="block mx-auto text-sm underline transition-all hover:opacity-70 hover:scale-105 active:scale-95"
                 style={{ color: '#4a1b10', fontFamily: 'Montaga, serif' }}
               >
                 Draw another card
@@ -1207,104 +1207,4 @@ export default function Home() {
       </div>
     </main>
   )
-}/* Card flip animation utilities */
-.preserve-3d {
-  transform-style: preserve-3d;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-/* Smooth animation for mobile */
-@media (hover: none) {
-  .transition-all {
-    transition-duration: 0.6s;
-  }
-}
-
-/* Remove tap highlight on mobile */
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* Entrance animations */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-down {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(40px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out;
-}
-
-.animate-fade-in-down {
-  animation: fade-in-down 0.8s ease-out;
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 1s ease-out 0.2s both;
-}
-
-/* Card hover effect - more dramatic */
-@media (hover: hover) {
-  .preserve-3d {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .preserve-3d:hover {
-    transform: translateY(-5px) scale(1.02);
-  }
-}
-
-/* Button effects */
-.hover\:scale-105:hover {
-  transform: scale(1.05);
-}
-
-.active\:scale-95:active {
-  transform: scale(0.95);
-}
-
-/* Card flip animation - smoother */
-.transition-all {
-  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Shadow enhancement */
-.shadow-3xl {
-  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.4);
 }
