@@ -1019,7 +1019,7 @@ export default function Home() {
         </h1>
         
         {/* Card Container */}
-        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto animate-fade-in-up">
+        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto animate-fade-in-up hover-lift">
           <div 
             className={`absolute inset-0 w-full h-full transition-all duration-700 transform-gpu preserve-3d cursor-pointer ${
               isFlipped ? 'rotate-y-180' : ''
