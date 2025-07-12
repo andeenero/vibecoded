@@ -1014,12 +1014,12 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center p-4" style={{ backgroundColor: '#d5ae76' }}>
       <div className="text-center max-w-2xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-12 tracking-widest animate-fade-in-down" style={{ color: '#4a1b10', fontFamily: 'Playfair Display, serif' }}>
+        <h1 className="text-5xl md:text-7xl font-bold mb-12 tracking-widest" style={{ color: '#4a1b10', fontFamily: 'Playfair Display, serif' }}>
           VIBECODED.
         </h1>
         
         {/* Card Container */}
-        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto animate-fade-in-up hover-lift">
+        <div className="relative w-72 sm:w-80 h-[400px] sm:h-[450px] mx-auto animate-fade-in">
           <div 
             className={`absolute inset-0 w-full h-full transition-all duration-700 transform-gpu preserve-3d cursor-pointer ${
               isFlipped ? 'rotate-y-180' : ''
@@ -1029,7 +1029,7 @@ export default function Home() {
           >
             {/* Card Front */}
             <div 
-              className="absolute inset-0 w-full h-full backface-hidden rounded-lg shadow-2xl flex items-center justify-center transition-shadow hover:shadow-3xl"
+              className="absolute inset-0 w-full h-full backface-hidden rounded-lg shadow-2xl flex items-center justify-center"
               style={{ 
                 backfaceVisibility: 'hidden',
                 backgroundColor: '#4a1b10'
@@ -1091,10 +1091,10 @@ export default function Home() {
           </p>
           
           {isFlipped && (
-            <div className="space-y-3 animate-fade-in">
+            <div className="space-y-3">
               <button
                 onClick={handleShare}
-                className="block mx-auto px-6 py-2 rounded-full transition-all hover:opacity-80 hover:scale-105 active:scale-95"
+                className="block mx-auto px-6 py-2 rounded-full transition-all hover:opacity-80"
                 style={{ 
                   backgroundColor: '#4a1b10',
                   color: '#d5ae76',
@@ -1106,7 +1106,7 @@ export default function Home() {
               
               <button
                 onClick={handleNewCard}
-                className="block mx-auto text-sm underline transition-all hover:opacity-70 hover:scale-105 active:scale-95"
+                className="block mx-auto text-sm underline transition-opacity hover:opacity-70"
                 style={{ color: '#4a1b10', fontFamily: 'Montaga, serif' }}
               >
                 Draw another card
